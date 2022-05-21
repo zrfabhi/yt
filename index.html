@@ -1,0 +1,249 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.5/dist/flowbite.min.css" />
+    <script src="https://unpkg.com/flowbite@1.4.5/dist/flowbite.js"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+</head>
+
+<body class="bg-gradient-to-r from-pink-500 to-violet-300">
+
+    <div class="container  h-[30rem] w-[23rem] mx-auto mt-5 justify-center shadow-2xl bg-white rounded-xl md:mt-14">
+        <div class="main p-2">
+            <div class="logo w-44 mx-auto ">
+
+                <img src="./mail.png" class="rounded-3xl" alt="" srcset="">
+            </div>
+
+
+
+            <div class="img_section ml-2 ">
+                <form action="/" method="post" enctype="multipart/form-data">
+
+                    <div class="subject flex items-center mb-6 ml-5 mt-10 md:mr-12">
+                        <div class="md:w-1/3">
+                            <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+                                for="inline-full-name">
+                                Youtube Link:
+                            </label>
+                        </div>
+                        <div class="md:w-2/3">
+                            <input
+                                class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                                id="yt-link" type="text" name="subject" value="">
+                        </div>
+
+                    </div>
+
+                    <div class="format flex space-x-4 ml-11">
+                        <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+                            for="inline-full-name">
+                            Format:
+                        </label>
+
+                        <div class="flex justify-center">
+                            <div>
+                                <div class="form-check">
+                                    <input
+                                        class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                                        type="radio" name="flexRadioDefault" id="mp3">
+                                    <label class="form-check-label inline-block text-gray-800" for="flexRadioDefault1">
+                                        MP3
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input
+                                        class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                                        type="radio" name="flexRadioDefault" id="mp4low" checked>
+                                    <label class="form-check-label inline-block text-gray-800" for="flexRadioDefault2">
+                                        MP4 Low
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input
+                                        class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                                        type="radio" name="flexRadioDefault" id="mp4high" checked>
+                                    <label class="form-check-label inline-block text-gray-800" for="flexRadioDefault2">
+                                        MP4 High
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 
+                        <button id="dropdownDefault" data-dropdown-toggle="dropdown"
+                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                            type="button">Format <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg></button>
+
+                        <div id="dropdown"
+                            class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700"
+                            data-popper-placement="bottom"
+                            style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(352px, 867px);">
+                            <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault" id="dropdown">
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">mp3</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">240P</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">360P</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">480P</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">720P</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">1080P</a>
+                                </li>
+                            </ul>
+                        </div> -->
+                    </div>
+
+                    <div class="max-w-[19rem] ml-5 ">
+
+                        <div id="submit_btn" class="flex flex-col">
+
+                            <div id="download2" class="download">
+
+                                <button id="download"
+                                    class="shadow mt-5  ml-24 bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+                                    type="submit">
+                                    Download
+                                </button>
+
+                            </div>
+
+
+
+                            <span class="text-center font-semibold text-gray-500 text-sm mt-5 ">Designed and managed by
+                                @Abhishek</span>
+                        </div>
+
+
+
+
+
+                    </div>
+
+                </form>
+
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        let mp3 = document.getElementById('mp3')
+        let mp3low = document.getElementById('mp4low')
+        let mp3high = document.getElementById('mp4high')
+        let yt_link = document.getElementById('yt-link');
+        let download = document.getElementById('download');
+        let download2 = document.getElementById('download2');
+        let dropdown = document.getElementById('dropdown');
+        let submit_btn = document.getElementById('submit_btn');
+
+        let mydiv = document.createElement('div');
+
+
+        var format;
+
+        mp3.addEventListener('click', (e) => {
+
+            var link = yt_link.value;
+            mydiv.innerHTML = `<iframe  width="200" height="50" class="ml-14 mt-5" target="_self" src="http://loader.to/api/button/?url=${link}&f=mp3" style="border-radius:10px;" title="Iframe Example"></iframe>`
+
+            console.log(link)
+            download2.append(mydiv)
+            download.remove()
+
+        })
+
+        mp4high.addEventListener('click', (e) => {
+
+            var link = yt_link.value;
+            mydiv.innerHTML = `<iframe  width="200" height="50" class="ml-14 mt-5" target="_self" src="http://loader.to/api/button/?url=${link}&f=720" style="border-radius:10px;" title="Iframe Example"></iframe>`
+
+            console.log(link)
+            download2.append(mydiv)
+            download.remove()
+
+        })
+
+        mp4low.addEventListener('click', (e) => {
+
+            var link = yt_link.value;
+            mydiv.innerHTML = `<iframe  width="200" height="50" class="ml-14 mt-5" target="_self" src="http://loader.to/api/button/?url=${link}&f=360" style="border-radius:10px;" title="Iframe Example"></iframe>`
+
+            console.log(link)
+            download2.append(mydiv)
+            download.remove()
+
+        })
+
+        dropdown.addEventListener('click', (e) => {
+            var link = yt_link.value;
+
+
+
+            format = e.target.innerText
+            format = format.toLowerCase()
+            if (format == "mp3") {
+
+                console.log("mp3")
+            }
+            else {
+
+                format = format.replace("p", "")
+                console.log(format)
+            }
+            console.log(format)
+            // mydiv.innerHTML = '<iframe  width="200" height="50" class="ml-14 mt-5" src="http://loader.to/api/button/?url=https://youtu.be/LmS_SVo1XYY&f=480" style="border-radius:10px;" title="Iframe Example"></iframe>'
+            mydiv.innerHTML = `<iframe  width="200" height="50" class="ml-14 mt-5" target="_self" src="http://loader.to/api/button/?url=${link}&f=${format}" style="border-radius:10px;" title="Iframe Example"></iframe>`
+
+            download2.append(mydiv)
+            download.remove()
+            // download.innerHTML = `<iframe  width="200" height="50" class="ml-14 mt-5" src="http://loader.to/api/button/?url=https://youtu.be/LmS_SVo1XYY&f=480" style="border-radius:10px;" title="Iframe Example"></iframe>`
+            // console.log(e.target.innerText)
+
+        })
+
+        download.addEventListener('click', (e) => {
+            e.preventDefault()
+
+
+            mydiv.innerHTML = `<iframe  width="200" height="50" class="ml-14 mt-5" src="http://loader.to/api/button/?url=${link}&f=${format}" style="border-radius:10px;" title="Iframe Example"></iframe>`
+
+            // console.log(format)
+
+
+            download2.append(mydiv)
+            download.remove()
+            // download.innerHTML = `<iframe  width="200" height="50" src="http://loader.to/api/button/?url=https://youtu.be/LmS_SVo1XYY&f=480" style="border:2px solid red;" title="Iframe Example"></iframe>`
+            console.log("OK")
+        })
+    </script>
+
+
+</body>
+
+</html>
